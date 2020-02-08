@@ -17,21 +17,19 @@ public class Redirectioner : MonoBehaviour
         if (vm == null)
             vm = FindObjectOfType<VariablesManager>();
 
+        rClick = GetComponent<RotateSelf>();
         if (rClick == null)
         {
-            rClick = GetComponent<RotateSelf>();
-            if (rClick == null)
-            {
-                rClick = gameObject.AddComponent<RotateSelf>();
-            }
+            rClick = gameObject.AddComponent<RotateSelf>();
         }
 
-        if(spriteTF == null)
+
+        if (spriteTF == null)
         {
             spriteTF = GetComponentInChildren<SpriteRenderer>().transform;
         }
 
-        transform.localRotation = Quaternion.Euler(0f,0f,(float)dir);
+        spriteTF.localRotation = Quaternion.Euler(0f,0f,(float)dir);
         debugDirection.text = dir.ToString();
     }
     private void OnMouseUpAsButton()

@@ -26,6 +26,11 @@ public class GManager : MonoBehaviour
 
     }
 
+    public void AddToStepsEvent(UnityAction function)
+    {
+        turnStep.AddListener(function);
+    }
+
     private void Update()
     {
         if(actionTimer <= 0)

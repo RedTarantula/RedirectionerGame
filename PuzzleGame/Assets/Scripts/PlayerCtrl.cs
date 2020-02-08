@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    public DirCompass dir = DirCompass.N;
+    public DirCompass startingDirection = DirCompass.N;
+    public LayerMask lethalLayers;
     VariablesManager vm;
     public float playerSpeed = .1f;
     MoveForward mf;
@@ -18,8 +19,8 @@ public class PlayerCtrl : MonoBehaviour
             mf = gameObject.AddComponent<MoveForward>();
         }
         vm = FindObjectOfType<VariablesManager>();
-        NewDirection();
         mf.active = launched;
+        mf.dir = startingDirection;
     }
 
     public void Launch()
@@ -27,19 +28,9 @@ public class PlayerCtrl : MonoBehaviour
         mf.active = true;
     }
 
-    private void NewDirection()
-    {
-        transform.localRotation = Quaternion.Euler(0f,0f,(float)dir);
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Redirectioner"))
-        {
-            Redirectioner rdr = collision.gameObject.GetComponent<Redirectioner>();
-            dir = rdr.dir;
-            NewDirection();
-        }
-        else if (collision.gameObject.CompareTag("Finishing Line"))
+        if (collision.gameObject.CompareTag("Finishing Line"))
         {
             Debug.Log("Reached finishing line");
         }

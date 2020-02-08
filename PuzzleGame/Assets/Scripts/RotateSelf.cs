@@ -7,7 +7,7 @@ public class RotateSelf : MonoBehaviour
     public DirCompass RotateSprite(Transform tf, DirCompass dir)
     {
         DirCompass newDir = NextDirection(dir);
-        transform.localRotation = Quaternion.Euler(0f,0f,(float)dir);
+        tf.localRotation = Quaternion.Euler(0f,0f,(float)dir-45f);
         return newDir;
     }
 

@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Redirectioner
   - Finishing Line
+  - Cannon
+  - CannonBall
+  - Weak Wall
+  - Crate
   layers:
   - Default
   - TransparentFX
@@ -15,10 +19,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Scenario
+  - Lethal Objects
+  - Special Objects
+  - Interactable
   - 
   - 
   - 

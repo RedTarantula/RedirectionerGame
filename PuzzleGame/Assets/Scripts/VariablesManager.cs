@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,10 +30,10 @@ public class VariablesManager : MonoBehaviour
         }
     }
 
-    public V2Int GetTargetCell(DirCompass dir)
+    public V2Int GetTargetCell(V2Int startCell, DirCompass dir)
     {
-        int px = (int)transform.position.x;
-        int py = (int)transform.position.y;
+        int px = startCell.x;
+        int py = startCell.y;
 
         switch (dir)
         {
@@ -52,13 +53,14 @@ public class VariablesManager : MonoBehaviour
                 break;
             case DirCompass.NE: px++; py++;
                 break;
-            default:
+            default: Debug.LogError("Impossible Direction");
                 break;
         }
         return new V2Int(px,py);
     }
 
 }
+[Serializable]
 public struct V2Int
 {
     public int x;
@@ -70,4 +72,4 @@ public struct V2Int
         y = _y;
     }
 }
-public enum DirCompass {N=0,NW=45,W=90,SW=135,S=180,SE=225,E=270,NE=315 };
+public enum DirCompass {N=0,NW=45,W=90,SW=135,S=180,SE=225,E=270,NE=315};
