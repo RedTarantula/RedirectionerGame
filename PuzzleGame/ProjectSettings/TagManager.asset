@@ -11,6 +11,8 @@ TagManager:
   - Weak Wall
   - Crate
   - Wall
+  - Water
+  - Lava
   layers:
   - Default
   - TransparentFX

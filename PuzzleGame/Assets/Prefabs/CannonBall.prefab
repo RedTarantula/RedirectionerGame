@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 2982932150596426909}
   - component: {fileID: -4330725306306933931}
   - component: {fileID: 7690063852262684701}
+  - component: {fileID: -5765400750325477807}
   m_Layer: 9
   m_Name: CannonBall
   m_TagString: CannonBall
@@ -139,7 +140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!50 &2982932150596426898
 Rigidbody2D:
@@ -176,7 +177,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dir: 0
   vm: {fileID: 0}
+  gm: {fileID: 0}
   active: 1
+  destroysCrates: 0
   spriteTF: {fileID: 2982932150363118589}
   tg:
     x: 0
@@ -184,6 +187,7 @@ MonoBehaviour:
   currentPos:
     x: 0
     y: 0
+  pushNext: 0
 --- !u!114 &-4330725306306933931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +203,11 @@ MonoBehaviour:
   lethalLayers:
     serializedVersion: 2
     m_Bits: 768
+  OnPlayerDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &7690063852262684701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,3 +224,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   destroySelf: 1
+--- !u!114 &-5765400750325477807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982932150596426908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8555b86f37f67d47a84f1023ce27b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
