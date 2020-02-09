@@ -71,5 +71,10 @@ public struct V2Int
         x = _x;
         y = _y;
     }
+
+    public static explicit operator Vector2(V2Int v)
+    {
+        return new Vector2(v.x,v.y);
+    }
 }
 public enum DirCompass {N=0,NW=45,W=90,SW=135,S=180,SE=225,E=270,NE=315};

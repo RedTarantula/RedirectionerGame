@@ -13,6 +13,7 @@ public class PlayerCtrl : MonoBehaviour
     public bool launched = false;
     private void Start()
     {
+
         mf = GetComponent<MoveForward>();
         if(GetComponent<MoveForward>() == null)
         {

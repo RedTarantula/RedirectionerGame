@@ -10,6 +10,7 @@ TagManager:
   - CannonBall
   - Weak Wall
   - Crate
+  - Wall
   layers:
   - Default
   - TransparentFX

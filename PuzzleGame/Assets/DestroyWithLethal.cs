@@ -11,7 +11,7 @@ public class DestroyWithLethal : MonoBehaviour
     {
         if ((lethalLayers.value & 1 << collision.gameObject.layer) != 0)
         {
-            Debug.Log("Collided with lethal");
+            //Debug.Log("Collided with lethal");
             Destroy(gameObject);
         }
     }

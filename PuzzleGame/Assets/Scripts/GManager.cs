@@ -36,7 +36,7 @@ public class GManager : MonoBehaviour
         if(actionTimer <= 0)
         {
             actionTimer = 1f/stepsPerSecond;
-            Debug.Log("Invoking turn step event");
+            //Debug.Log("Invoking turn step event");
             turnStep.Invoke();
         }
         else
