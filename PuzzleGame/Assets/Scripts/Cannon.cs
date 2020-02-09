@@ -8,7 +8,7 @@ public class Cannon : MonoBehaviour
     public DirCompass dir = DirCompass.N;
     public GameObject bulletPref;
     public VariablesManager vm;
-    RotateSelf rs;
+    public RotateSelf rs;
     public GManager gm;
     public int waitSteps = 2;
     public int startSteps = 0;
@@ -20,7 +20,10 @@ public class Cannon : MonoBehaviour
     private void Start()
     {
         vm = FindObjectOfType<VariablesManager>();
-        currentWait = startSteps;
+        gm = FindObjectOfType<GManager>();
+        rs = GetComponent<RotateSelf>();
+        rs.RotateSprite(spriteTF,dir,false);
+        currentWait = 1;
     }
 
     public void TurnStep()

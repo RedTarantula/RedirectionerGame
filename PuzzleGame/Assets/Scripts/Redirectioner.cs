@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class Redirectioner : MonoBehaviour
 {
+    
+
 
     public DirCompass dir = DirCompass.N;
     public VariablesManager vm;
     public RotateSelf rClick;
-    public Text debugDirection;
     public Transform spriteTF;
+    public bool rotationable = true;
 
     private void Start()
     {
@@ -28,13 +30,14 @@ public class Redirectioner : MonoBehaviour
         {
             spriteTF = GetComponentInChildren<SpriteRenderer>().transform;
         }
-
-        spriteTF.localRotation = Quaternion.Euler(0f,0f,(float)dir);
-        debugDirection.text = dir.ToString();
+        dir = rClick.RotateSprite(spriteTF,dir,false);
     }
     private void OnMouseUpAsButton()
     {
-        dir = rClick.RotateSprite(spriteTF,dir);
-        debugDirection.text = dir.ToString();
+        if (rotationable)
+        {
+            dir = rClick.RotateSprite(spriteTF,dir);
+        }
     }
+
 }
