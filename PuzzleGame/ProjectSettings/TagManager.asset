@@ -13,6 +13,7 @@ TagManager:
   - Wall
   - Water
   - Lava
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Lethal Objects
   - Special Objects
   - Interactable
-  - 
+  - Deactivated Hazard
   - 
   - 
   - 

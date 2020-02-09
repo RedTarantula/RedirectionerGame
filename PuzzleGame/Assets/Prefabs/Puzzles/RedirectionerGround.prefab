@@ -47,11 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8f4b7cd912420429b5e5bdfbb403ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: 270
+  dir: 90
   vm: {fileID: 0}
   rClick: {fileID: 0}
   spriteTF: {fileID: 4788137882820161496}
   rotationable: 1
+  startRandom: 1
 --- !u!61 &3595134525560273849
 BoxCollider2D:
   m_ObjectHideFlags: 0

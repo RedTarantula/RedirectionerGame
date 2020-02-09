@@ -126,3 +126,4 @@ MonoBehaviour:
   playerPref: {fileID: 6632649532622564928, guid: 6df489fbc31b0e74d813ebe511b816b7,
     type: 3}
   startingDir: 0
+  launchButton: {fileID: 0}
