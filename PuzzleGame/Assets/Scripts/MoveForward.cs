@@ -8,6 +8,7 @@ public class MoveForward : MonoBehaviour
 
     public DirCompass dir;
     public VariablesManager vm;
+    public GManager gm;
     public bool active = true;
     public bool destroysCrates = false;
     public Transform spriteTF;
@@ -16,9 +17,13 @@ public class MoveForward : MonoBehaviour
     [SerializeField]
     public V2Int currentPos;
     public bool pushNext=false;
-    private void Awake()
+
+
+    private void Start()
     {
         vm = FindObjectOfType<VariablesManager>();
+        gm = FindObjectOfType<GManager>();
+        gm.turnStep.AddListener(TurnStep);
     }
 
     public void TurnStep()

@@ -24,6 +24,8 @@ public class Cannon : MonoBehaviour
         rs = GetComponent<RotateSelf>();
         rs.RotateSprite(spriteTF,dir,false);
         currentWait = startSteps;
+
+        gm.turnStep.AddListener(TurnStep);
     }
 
     public void TurnStep()
@@ -56,7 +58,6 @@ public class Cannon : MonoBehaviour
         MoveForward gomf = go.GetComponent<MoveForward>();
         gomf.dir = dir;
         gomf.active = true;
-        gm.AddToStepsEvent(gomf.TurnStep);
     }
 
     private void OnMouseUpAsButton()

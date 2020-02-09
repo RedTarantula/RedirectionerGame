@@ -13,21 +13,6 @@ public class GManager : MonoBehaviour
     public int stepsPerSecond = 2;
     public bool pausedSteps;
 
-    private void Start()
-    {
-        
-        MoveForward[] mfd = FindObjectsOfType<MoveForward>();
-        foreach (MoveForward m in mfd)
-        {
-            turnStep.AddListener(m.TurnStep);
-        }
-        Cannon[] cn = FindObjectsOfType<Cannon>();
-        foreach (Cannon c in cn)
-        {
-            turnStep.AddListener(c.TurnStep);
-        }
-
-    }
 
     public void AddToStepsEvent(UnityAction function)
     {

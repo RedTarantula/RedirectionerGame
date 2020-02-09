@@ -109,9 +109,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1646353505035460432}
   - component: {fileID: 1646353505035460438}
-  - component: {fileID: 1646353505035460433}
   - component: {fileID: 1646353505035460434}
   - component: {fileID: 7679109613513393351}
+  - component: {fileID: 8687471266775933188}
   m_Layer: 0
   m_Name: RedirectionerWall
   m_TagString: Redirectioner
@@ -146,37 +146,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8f4b7cd912420429b5e5bdfbb403ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: 270
+  dir: 180
   vm: {fileID: 0}
   rClick: {fileID: 0}
   spriteTF: {fileID: 1646353505988080608}
   rotationable: 1
---- !u!61 &1646353505035460433
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646353505035460437}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: -0.5}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 1}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  startRandom: 1
 --- !u!50 &1646353505035460434
 Rigidbody2D:
   serializedVersion: 4
@@ -218,6 +193,22 @@ MonoBehaviour:
   spriteSE: {fileID: 21300000, guid: 74579e06d6ce18a46b5a2d6a78c4e4f6, type: 3}
   spriteSW: {fileID: 21300000, guid: c8cdafef9ad2cef4b85951c63a0960d2, type: 3}
   spriteW: {fileID: 21300000, guid: 10699f22f42842947ad484837ee363c8, type: 3}
+--- !u!58 &8687471266775933188
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646353505035460437}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5, y: -0.5}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1646353505139397125
 GameObject:
   m_ObjectHideFlags: 0
