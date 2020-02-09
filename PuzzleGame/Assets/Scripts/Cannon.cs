@@ -23,7 +23,7 @@ public class Cannon : MonoBehaviour
         gm = FindObjectOfType<GManager>();
         rs = GetComponent<RotateSelf>();
         rs.RotateSprite(spriteTF,dir,false);
-        currentWait = 1;
+        currentWait = startSteps;
     }
 
     public void TurnStep()
@@ -38,6 +38,11 @@ public class Cannon : MonoBehaviour
             currentWait--;
         }
         waitText.text = currentWait.ToString();
+
+        if (currentWait == 0)
+            waitText.color = Color.red;
+        else
+            waitText.color = Color.white;
     }
 
     void ShootCannon()

@@ -150,11 +150,13 @@ MonoBehaviour:
   bulletPref: {fileID: 2982932150596426908, guid: 665791784c5bfd04595d31a6eca5a2c6,
     type: 3}
   vm: {fileID: 0}
+  rs: {fileID: 0}
   gm: {fileID: 0}
   waitSteps: 5
   startSteps: 5
   currentWait: 0
   rotationable: 0
+  waitText: {fileID: 2580259084375174044}
   spriteTF: {fileID: 3646937700753913651}
 --- !u!61 &2580259084271757003
 BoxCollider2D:

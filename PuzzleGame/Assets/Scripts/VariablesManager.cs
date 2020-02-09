@@ -59,6 +59,31 @@ public class VariablesManager : MonoBehaviour
         return new V2Int(px,py);
     }
 
+    internal DirCompass GetRandomDir()
+    {
+        int i = UnityEngine.Random.Range(0,8);
+        switch (i)
+        {
+            case 0:
+                return DirCompass.N;
+            case 1:
+                return DirCompass.NE;
+            case 2:
+                return DirCompass.NW;
+            case 3:
+                return DirCompass.E;
+            case 4:
+                return DirCompass.W;
+            case 5:
+                return DirCompass.S;
+            case 6:
+                return DirCompass.SE;
+            case 7:
+                return DirCompass.SW;
+            default:
+                return DirCompass.N;
+        }
+    }
 }
 [Serializable]
 public struct V2Int

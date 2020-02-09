@@ -13,7 +13,7 @@ public class Redirectioner : MonoBehaviour
     public RotateSelf rClick;
     public Transform spriteTF;
     public bool rotationable = true;
-
+    public bool startRandom = false;
     private void Start()
     {
         if (vm == null)
@@ -31,6 +31,13 @@ public class Redirectioner : MonoBehaviour
             spriteTF = GetComponentInChildren<SpriteRenderer>().transform;
         }
         dir = rClick.RotateSprite(spriteTF,dir,false);
+
+        if(startRandom)
+        {
+            dir = vm.GetRandomDir();
+            rClick.RotateSprite(spriteTF,dir,false);
+        }
+
     }
     private void OnMouseUpAsButton()
     {

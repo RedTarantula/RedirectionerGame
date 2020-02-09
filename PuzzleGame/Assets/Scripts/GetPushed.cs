@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GetPushed : MonoBehaviour
 {
-
-    
     public LayerMask lethalLayers;
     public VariablesManager vm;
     public DirCompass dir;
@@ -25,6 +23,10 @@ public class GetPushed : MonoBehaviour
         }
         if ((lethalLayers.value & 1 << collision.gameObject.layer) != 0)
         {
+            if (collision.CompareTag("Water"))
+            {
+                Destroy(collision.gameObject);
+            }
             Destroy(gameObject);
         }
 

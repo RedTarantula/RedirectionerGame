@@ -9,8 +9,9 @@ public class PlayerCtrl : MonoBehaviour
     public LayerMask lethalLayers;
     VariablesManager vm;
     public float playerSpeed = .1f;
-    MoveForward mf;
+    public MoveForward mf;
     public bool launched = false;
+    public PlayerSpawner ps;
     private void Start()
     {
 
@@ -19,6 +20,10 @@ public class PlayerCtrl : MonoBehaviour
         {
             mf = gameObject.AddComponent<MoveForward>();
         }
+
+        if (ps == null)
+            ps = FindObjectOfType<PlayerSpawner>();
+
         vm = FindObjectOfType<VariablesManager>();
         mf.active = launched;
         mf.dir = startingDirection;
@@ -34,6 +39,7 @@ public class PlayerCtrl : MonoBehaviour
         if (collision.gameObject.CompareTag("Finishing Line"))
         {
             Debug.Log("Reached finishing line");
+            mf.active = false;
         }
     }
 }
