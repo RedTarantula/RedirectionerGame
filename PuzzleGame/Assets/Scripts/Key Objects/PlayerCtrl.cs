@@ -22,17 +22,13 @@ public class PlayerCtrl : MonoBehaviour
             mf = gameObject.AddComponent<MoveForward>();
         }
 
-        if (ps == null)
-            ps = FindObjectOfType<PlayerSpawner>();
     }
     private void Start()
     {
-
-
         gm = FindObjectOfType<GManager>();
         vm = FindObjectOfType<VariablesManager>();
         mf.active = launched;
-        mf.dir = startingDirection;
+        //mf.dir = startingDirection;
     }
 
     public void Launch()
@@ -46,6 +42,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             Debug.Log("Reached finishing line");
             mf.active = false;
+            gm.completedPanel.SetActive(true);
         }
     }
 

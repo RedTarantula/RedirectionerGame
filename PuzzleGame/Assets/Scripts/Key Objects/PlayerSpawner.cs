@@ -11,16 +11,19 @@ public class PlayerSpawner : MonoBehaviour
 
     public void Start()
     {
+        launchButton = GameObject.Find("LaunchPlayer").GetComponent<Button>();
         SpawnPlayer();
     }
 
     public void SpawnPlayer()
     {
-        PlayerCtrl p = Instantiate(playerPref).GetComponent<PlayerCtrl>();
+        GameObject go = Instantiate(playerPref);
+        PlayerCtrl p = go.GetComponent<PlayerCtrl>();
         p.transform.position = transform.position;
         p.launched = false;
         p.ps = this;
         p.mf.dir = startingDir;
+        go.transform.SetParent(transform);
         launchButton.onClick.RemoveAllListeners();
         launchButton.onClick.AddListener(p.Launch);
     }
