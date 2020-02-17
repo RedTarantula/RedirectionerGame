@@ -1662,7 +1662,7 @@ PrefabInstance:
     - target: {fileID: 2995619800676526063, guid: 597ff6ac523a8cb49be4121a29bcebf5,
         type: 3}
       propertyPath: levels.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2995619800676526063, guid: 597ff6ac523a8cb49be4121a29bcebf5,
         type: 3}
@@ -1681,6 +1681,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1390912244503253815, guid: c7e305277208c31419c430dcff1b5f7d,
         type: 3}
+    - target: {fileID: 2995619800676526063, guid: 597ff6ac523a8cb49be4121a29bcebf5,
+        type: 3}
+      propertyPath: levels.Array.data[2]
+      value: 
+      objectReference: {fileID: 5554155255806062372, guid: e6179206f2fb81d41a1313e68e0bfda7,
+        type: 3}
+    - target: {fileID: 2995619800676526063, guid: 597ff6ac523a8cb49be4121a29bcebf5,
+        type: 3}
+      propertyPath: stepsPerSecond
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2995619800676526062, guid: 597ff6ac523a8cb49be4121a29bcebf5,
         type: 3}
       propertyPath: m_LocalPosition.x
